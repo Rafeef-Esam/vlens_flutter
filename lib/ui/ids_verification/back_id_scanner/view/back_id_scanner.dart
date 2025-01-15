@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/services.dart';
 import 'package:vlens_flutter/utilities/colors.dart';
+import 'package:vlens_flutter/utilities/text_styles.dart';
 import 'dart:io';
 
 import '../../../../custom_views/custom_camera_button.dart';
@@ -106,7 +107,7 @@ class _BackIdScannerState extends State<BackIdScanner> {
     setState(() {
       _imagePath = null;
     });
-    _initializeCamera(); // Re-initialize the camera to take another picture
+    _initializeCamera();
   }
 
   @override
@@ -202,6 +203,8 @@ class _BackIdScannerState extends State<BackIdScanner> {
                   : Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        Text('back_id'.tr(), style: CustomTextStyle.body),
+                        const SizedBox(height: 20),
                         // Display the captured image
                         Image.file(File(_imagePath!)),
                         const SizedBox(height: 20),

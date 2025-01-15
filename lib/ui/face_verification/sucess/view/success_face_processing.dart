@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:vlens_flutter/utilities/colors.dart';
 import 'package:vlens_flutter/utilities/text_styles.dart';
 
@@ -11,7 +12,10 @@ class SuccessFaceProcessing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopScope(
-        canPop: false,
+        onPopInvokedWithResult: (bool popped, dynamic result) {
+          Navigator.pushNamedAndRemoveUntil(context, "/SuccessFaceProcessing", (r) => false);
+          SystemNavigator.pop();
+        },
         child: Scaffold(
             backgroundColor: Colors.white,
             body: SizedBox(

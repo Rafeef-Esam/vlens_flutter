@@ -8,6 +8,7 @@ import 'dart:io';
 import '../../../../custom_views/custom_camera_button.dart';
 import '../../../../custom_views/custom_camera_header.dart';
 import '../../../../utilities/image_crop.dart';
+import '../../../../utilities/text_styles.dart';
 import '../../../ids_instructions/view/ids_instructions_screen.dart';
 import '../../back_id_scanner/view/back_id_scanner.dart';
 
@@ -208,6 +209,8 @@ class _FrontIdScannerState extends State<FrontIdScanner> {
                   : Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        Text('front_id'.tr(), style: CustomTextStyle.body),
+                        const SizedBox(height: 20),
                         // Display the captured image
                         Image.file(File(_imagePath!)),
                         const SizedBox(height: 30),
