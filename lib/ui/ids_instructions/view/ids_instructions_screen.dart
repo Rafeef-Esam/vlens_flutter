@@ -29,7 +29,7 @@ class IDsInstructionsScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 50, 20, 40),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Logo
                   Image.asset(
@@ -145,14 +145,18 @@ class IDsInstructionsScreen extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // Scan ID Button
-                  CustomButton(
-                    backgroundColor: UIColors.teal,
-                    text: 'scan_id'.tr(),
-                    onPressed: () {
-                      navigateToFrontIdScanner(context);
-                      // Add your functionality here
-                    },
+                  SizedBox(
+                    width: double.infinity,
+                    child:   CustomButton(
+                      backgroundColor: UIColors.teal,
+                      text: 'scan_id'.tr(),
+                      onPressed: () {
+                        navigateToFrontIdScanner(context);
+                        // Add your functionality here
+                      },
+                    ),
                   ),
+
                   const SizedBox(height: 14),
 
                   Row(

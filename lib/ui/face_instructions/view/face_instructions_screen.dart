@@ -27,7 +27,7 @@ class FaceInstructionsScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 50, 20, 40),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Logo
                   Image.asset(
@@ -123,13 +123,16 @@ class FaceInstructionsScreen extends StatelessWidget {
                   const SizedBox(height: 35),
 
                   // Scan ID Button
-                  CustomButton(
-                    backgroundColor: UIColors.teal,
-                    text: 'Start Scanning'.tr(),
-                    onPressed: () {
-                      navigateToStraightFaceVerificationScreen(context);
-                      // Add your functionality here
-                    },
+                  SizedBox(
+                    width: double.infinity,
+                    child: CustomButton(
+                      backgroundColor: UIColors.teal,
+                      text: 'Start Scanning'.tr(),
+                      onPressed: () {
+                        navigateToStraightFaceVerificationScreen(context);
+                        // Add your functionality here
+                      },
+                    ),
                   ),
 
                   const SizedBox(height: 14),
