@@ -209,7 +209,7 @@ class _FrontIdScannerState extends State<FrontIdScanner> {
                   : Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('front_id'.tr(), style: CustomTextStyle.body),
+                        Text('front_id'.tr(), style: CustomTextStyle.header),
                         const SizedBox(height: 20),
                         // Display the captured image
                         Image.file(File(_imagePath!)),

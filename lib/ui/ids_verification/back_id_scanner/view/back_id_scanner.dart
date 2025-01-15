@@ -203,7 +203,7 @@ class _BackIdScannerState extends State<BackIdScanner> {
                   : Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('back_id'.tr(), style: CustomTextStyle.body),
+                        Text('back_id'.tr(), style: CustomTextStyle.header),
                         const SizedBox(height: 20),
                         // Display the captured image
                         Image.file(File(_imagePath!)),
