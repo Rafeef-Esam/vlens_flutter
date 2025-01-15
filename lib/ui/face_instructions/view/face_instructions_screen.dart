@@ -25,7 +25,7 @@ class FaceInstructionsScreen extends StatelessWidget {
           backgroundColor: Colors.white,
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
+              padding: const EdgeInsets.fromLTRB(20, 50, 20, 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -130,6 +130,18 @@ class FaceInstructionsScreen extends StatelessWidget {
                       navigateToStraightFaceVerificationScreen(context);
                       // Add your functionality here
                     },
+                  ),
+
+                  const SizedBox(height: 14),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'powered_by'.tr(),
+                        style: CustomTextStyle.body,
+                      ),
+                      Image.asset('assets/images/small_logo.png')
+                    ],
                   ),
                 ],
               ),

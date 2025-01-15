@@ -107,8 +107,7 @@ class _LeftFaceVerificationScreen extends State<LeftFaceVerificationScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => const RightFaceVerificationScreen()
-      ),
+          builder: (context) => const RightFaceVerificationScreen()),
     );
   }
 
@@ -152,37 +151,36 @@ class _LeftFaceVerificationScreen extends State<LeftFaceVerificationScreen> {
 
                       // Instruction Container Positioned below the Scanning Frame
                       Positioned(
-                        bottom: 40,
-                        left: 20,
-                        right: 20,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 25),
-                          decoration: BoxDecoration(
-                            color: UIColors.midnightBlue,
-                            borderRadius: BorderRadius.circular(24),
-                            border: Border.all(
-                              color: Colors.transparent,
-                              width: 1.0,
-                            ),
-                          ),
+                          bottom: 40,
+                          left: 20,
+                          right: 20,
                           child: Column(
-                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.asset('assets/images/left_face.png'),
-                              const SizedBox(height: 8),
-                              Text(
-                                'look_left'.tr(),
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: UIColors.white50,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
+                              const SizedBox(height: 12),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 16, vertical: 15),
+                                decoration: BoxDecoration(
+                                  color: UIColors.midnightBlue.withAlpha(80),
+                                  borderRadius: BorderRadius.circular(24),
+                                  border: Border.all(
+                                    color: Colors.transparent,
+                                    width: 1.0,
+                                  ),
+                                ),
+                                child: Text(
+                                  'look_left'.tr(),
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      color: UIColors.white50,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500),
+                                ),
                               ),
                             ],
-                          ),
-                        ),
-                      ),
+                          )),
                     ],
                   ),
                 ),

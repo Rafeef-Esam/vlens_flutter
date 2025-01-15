@@ -12,16 +12,17 @@ class StraightFaceVerificationScreen extends StatefulWidget {
   const StraightFaceVerificationScreen({super.key});
 
   @override
-  State<StraightFaceVerificationScreen> createState() => _StraightFaceVerificationScreen();
+  State<StraightFaceVerificationScreen> createState() =>
+      _StraightFaceVerificationScreen();
 }
 
-class _StraightFaceVerificationScreen extends State<StraightFaceVerificationScreen> {
+class _StraightFaceVerificationScreen
+    extends State<StraightFaceVerificationScreen> {
   CameraController? _controller;
   bool _isFlashOn = false;
   bool _isInitialized = false;
 
   GlobalKey scanningFrameKey = GlobalKey();
-
 
   @override
   void initState() {
@@ -36,7 +37,7 @@ class _StraightFaceVerificationScreen extends State<StraightFaceVerificationScre
       if (cameras.isEmpty) return;
 
       final frontCamera = cameras.firstWhere(
-            (camera) => camera.lensDirection == CameraLensDirection.front,
+        (camera) => camera.lensDirection == CameraLensDirection.front,
       );
 
       _controller = CameraController(
@@ -81,6 +82,7 @@ class _StraightFaceVerificationScreen extends State<StraightFaceVerificationScre
       }
     }
   }
+
   @override
   void dispose() {
     _controller?.dispose();
@@ -88,20 +90,19 @@ class _StraightFaceVerificationScreen extends State<StraightFaceVerificationScre
   }
 
   // navigation
-   navigateToRightFaceVerification(BuildContext context) {
-    Future.delayed(const Duration(seconds: 6), () { // TODO: Remove delay in production
+  navigateToRightFaceVerification(BuildContext context) {
+    Future.delayed(const Duration(seconds: 6), () {
+      // TODO: Remove delay in production
       if (context.mounted) {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const RightFaceVerificationScreen()),
+          MaterialPageRoute(
+              builder: (context) => const RightFaceVerificationScreen()),
         );
       }
     });
   }
 
-  navigateToFaceInsctruction(){
-
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -141,44 +142,43 @@ class _StraightFaceVerificationScreen extends State<StraightFaceVerificationScre
 
                   // Instruction Container Positioned below the Scanning Frame
                   Positioned(
-                    bottom: 40,
-                    left: 20,
-                    right: 20,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 25),
-                      decoration: BoxDecoration(
-                        color: UIColors.midnightBlue,
-                        borderRadius: BorderRadius.circular(24),
-                        border: Border.all(
-                          color: Colors.transparent,
-                          width: 1.0,
-                        ),
-                      ),
+                      bottom: 40,
+                      left: 20,
+                      right: 20,
                       child: Column(
-                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset('assets/images/striat_face.png'),
-                          const SizedBox(height: 8),
-                          Text(
-                            'look_straight'.tr(),
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: UIColors.white50,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500),
+                          SizedBox(height: 20,),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 15),
+                            decoration: BoxDecoration(
+                              color: UIColors.midnightBlue.withAlpha(80),
+                              borderRadius: BorderRadius.circular(24),
+                              border: Border.all(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                            ),
+                            child: Text(
+                              'look_straight'.tr(),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: UIColors.white50,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                            ),
                           ),
                         ],
-                      ),
-                    ),
-                  ),
+                      )),
                 ],
               ),
             ),
 
             // Bottom Button (Capture Image)
             CameraButton(
-              onTap: (){},
+              onTap: () {},
             ),
           ],
         ),

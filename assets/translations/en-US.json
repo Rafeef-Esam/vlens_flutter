@@ -22,7 +22,7 @@
   "scan_face_instructions": "You’ll be asked to do a random 3 out of these 5 fun movements",
   "keep_your_camera_steady": "Keep your camera steady to make sure the pictures come out sharp.",
   "start_scanning": "Start Scanning",
-  "look_straight": "Look Straight: Look directly into the camera.",
+  "look_straight": "Look directly into the camera.",
   "look_right": "Turn face a bit to the right",
   "look_left": "Now, Turn face a bit to the left",
   "verify_your_identity": "Verifying your identity",
@@ -32,5 +32,6 @@
   "retry_scan_your_face": "Retry scanning your face",
   "unable_to_process_face": "Unable to process. Ensure your face is within the frame.",
   "back_id": "Back ID",
-  "front_id": "Front ID"
+  "front_id": "Front ID",
+  "powered_by": "Powered By "
 }

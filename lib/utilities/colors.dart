@@ -13,7 +13,7 @@ class UIColors {
   static final white50 = hexToColor('#FEFEFE');
   static final sandColor = hexToColor('##E0C172');
   static final teal200 = hexToColor('#A4BFBF');
-  static final midnightBlue = hexToColor('#13172280');
+  static final midnightBlue = hexToColor('#131722');
 
 }
 

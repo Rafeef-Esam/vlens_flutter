@@ -166,7 +166,7 @@ class _FrontIdScannerState extends State<FrontIdScanner> {
                           child: Align(
                             alignment: Alignment.center,
                             child: Image.asset(
-                              'assets/images/scanning_frame.png',
+                              'assets/images/front_scanning_frame.png',
                               key: scanningFrameKey,
                             ),
                           ),
@@ -210,7 +210,7 @@ class _FrontIdScannerState extends State<FrontIdScanner> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('front_id'.tr(), style: CustomTextStyle.header),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 12),
                         // Display the captured image
                         Image.file(File(_imagePath!)),
                         const SizedBox(height: 30),

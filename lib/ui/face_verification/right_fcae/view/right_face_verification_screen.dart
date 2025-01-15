@@ -121,7 +121,7 @@ class _RightFaceVerificationScreen extends State<RightFaceVerificationScreen> {
               children: [
                 // Header with navigation and flash
                 CameraHeader(
-                  onBackTap: () =>  navigateToStraightFace(context),
+                  onBackTap: () => navigateToStraightFace(context),
                   onFlashToggle: _toggleFlash,
                   isFlashOn: _isFlashOn,
                 ),
@@ -153,23 +153,23 @@ class _RightFaceVerificationScreen extends State<RightFaceVerificationScreen> {
                         bottom: 40,
                         left: 20,
                         right: 20,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 25),
-                          decoration: BoxDecoration(
-                            color: UIColors.midnightBlue,
-                            borderRadius: BorderRadius.circular(24),
-                            border: Border.all(
-                              color: Colors.transparent,
-                              width: 1.0,
-                            ),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Image.asset('assets/images/right_face.png'),
-                              const SizedBox(height: 8),
-                              Text(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset('assets/images/right_face.png'),
+                            const SizedBox(height: 12),
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 15),
+                              decoration: BoxDecoration(
+                                color: UIColors.midnightBlue.withAlpha(80),
+                                borderRadius: BorderRadius.circular(24),
+                                border: Border.all(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                              ),
+                              child: Text(
                                 'look_right'.tr(),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -177,8 +177,8 @@ class _RightFaceVerificationScreen extends State<RightFaceVerificationScreen> {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w500),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
